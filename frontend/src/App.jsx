@@ -5,7 +5,7 @@ import {Routes,Route} from 'react-router-dom'
 import About from './components/About'
 import Contact from './components/Contact'
 import Home from './components/Home.jsx'
-import Products from './components/products'
+import Products from './components/products.jsx'
 const App = () => {
   return (
     <>
