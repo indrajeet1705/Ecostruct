@@ -3,102 +3,86 @@ import Footer from "./Footer";
 import ProductCard from "./ProductCard";
 import product from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+
 const Home = () => {
-  const navigate= useNavigate()
+  const navigate = useNavigate();
+
   return (
-    <div className="w-full  h-screen ">
+    <div className="w-full">
       <img
         src="/images/home.jpg"
-        className=" h-full w-full object-cover fixed overflow-hidden "
+        className="h-screen w-full object-cover fixed top-0 left-0 z-0"
         alt=""
       />
-      <div className=" w-full h-full top-0 lef-0 bg-black opacity-50 "></div>
-      <div className=" w-full h-full flex items-center   absolute top-0 left-0 justify-center ">
-        <div className="p-4 text-white  flex flex-col gap-6">
-          <p className=" text-center text-6xl font-bold ">
+
+      <div className="w-full h-screen top-0 left-0 bg-black opacity-50 fixed z-10"></div>
+
+      <div className="relative z-20 w-full h-screen flex items-center justify-center px-4">
+        <div className="text-white text-center flex flex-col gap-6 max-w-3xl">
+          <p className="text-3xl sm:text-4xl md:text-6xl font-bold">
             Building Dubai's Future
           </p>
-          <p className=" text-center text-3xl font-semibold">
-            Your trusted partner for premium construction supplies, tools
-            <br /> and materials across the UAE
+          <p className="text-base sm:text-xl md:text-2xl font-medium">
+            Your trusted partner for premium construction supplies, tools <br className="hidden sm:block" />
+            and materials across the UAE
           </p>
-          <div className=" p-4 flex gap-5 items-center  mx-auto   ">
-            <button className=" bg-blue-500 px-5 py-3 rounded-lg">
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-blue-500 px-5 py-3 rounded-lg text-sm sm:text-base hover:scale-105 transition">
               Browse Products
             </button>
-            <button className=" bg-green-500 px-5 py-3 rounded-lg">
+            <button className="bg-green-500 px-5 py-3 rounded-lg text-sm sm:text-base hover:scale-105 transition">
               WhatsApp Us
             </button>
           </div>
         </div>
       </div>
-      <div className=" h-screen w-full bg-white p-6 itme  top-0 left-0 relative">
-        <div className=" p-10 gap-10 flex flex-col ">
-          {" "}
-          <p className=" text-6xl font-bold text-center text-black">
+
+      <div className="w-full bg-white px-4 py-12 relative z-30">
+        <div className="max-w-7xl mx-auto flex flex-col gap-6">
+          <p className="text-3xl md:text-5xl font-bold text-center text-black">
             Our Product Categories
           </p>
-          <p className=" text-4xl font-semibold text-center text-gray-800">
+          <p className="text-lg md:text-2xl font-semibold text-center text-gray-800">
             Comprehensive construction supplies for all your project needs
           </p>
-          <div className=" mt-5  w-full h-[400px] flex items-center  justify-evenly">
-            {product.map((item, index) => {
-              return (
-                <div key={index}>
-                  <ProductCard
-                    name={item.name}
-                    image={item.image}
-                    info={item.info}
-                  ></ProductCard>
-                </div>
-              );
-            })}
+          <div className="flex flex-wrap gap-8 justify-center mt-6">
+            {product.map((item, index) => (
+              <ProductCard key={index} name={item.name} image={item.image} info={item.info} />
+            ))}
           </div>
         </div>
       </div>
-      <div className=" relative w-full h-[70vh] flex flex-wrap items-center p-10 justify-evenly  bg-gray-100">
-        <div className=" w-[500px] flex flex-col  p-5 gap-5 h-[400px] ">
-          <p className=" text-black text-3xl flex-wrap font-semibold">
-            About ECOSTRUCT TRADING <br />
-            LLC
+
+      <div className="relative w-full py-12 px-4 flex flex-col lg:flex-row items-center justify-evenly bg-gray-100 gap-10 z-30">
+        <div className="max-w-md flex flex-col gap-5 text-center lg:text-left">
+          <p className="text-2xl md:text-3xl font-semibold text-black">
+            About ECOSTRUCT TRADING <br className="hidden md:block" /> LLC
           </p>
-          <p className=" text-gray-700 ">
-            Based in Dubai, we are a leading construction supply company serving
-            contracting firms and facilities management companies across the
-            UAE. Our commitment to quality and reliability has made us a trusted
-            partner in the construction industry.
+          <p className="text-gray-700 text-sm md:text-base">
+            Based in Dubai, we are a leading construction supply company serving contracting firms and facilities management companies across the UAE. Our commitment to quality and reliability has made us a trusted partner in the construction industry.
           </p>
-          <div className=" mx-auto gap-8 flex ">
-            <div className=" w-[200px] h-[100px] p-3 flex flex-col gap-1 text-center text-3xl font-semibold text-blue-500">
-              {" "}
-              500+ <p className="text-sm text-gray-800">
-                {" "}
-                project Completed
-              </p>{" "}
+          <div className="flex justify-center lg:justify-start gap-8">
+            <div className="flex flex-col text-blue-500 text-2xl font-semibold">
+              500+ <p className="text-sm text-gray-800">Projects Completed</p>
             </div>
-            <div className=" w-[200px] h-[100px] p-3 flex flex-col gap-1 text-center text-3xl font-semibold text-blue-500">
-              {" "}
-              50+ <p className="text-sm text-gray-800">
-                {" "}
-                Trusted Parteners
-              </p>{" "}
+            <div className="flex flex-col text-blue-500 text-2xl font-semibold">
+              50+ <p className="text-sm text-gray-800">Trusted Partners</p>
             </div>
           </div>
-          <button onClick={()=>navigate('/about')} className=" px-5 py-2 bg-blue-600 text-semibold text-white rounded-2xl">
-            Learn more about us{" "}
+          <button
+            onClick={() => navigate("/about")}
+            className="bg-blue-600 px-5 py-2 rounded-2xl text-white font-medium hover:scale-105 transition w-fit mx-auto lg:mx-0"
+          >
+            Learn more about us
           </button>
         </div>
-        <div className=" w-[500px] flex flex-col  shadow-xl shadow-gray-400  gap-5 h-[400px]  overflow-hidden rounded-2xl">
-          {" "}
-          <img
-            className=" w-full h-full object-cover "
-            src="/images/city.avif"
-            alt=""
-          />
+
+        <div className="max-w-sm w-full rounded-2xl overflow-hidden shadow-lg shadow-gray-400">
+          <img src="/images/city.avif" alt="" className="w-full h-full object-cover" />
         </div>
       </div>
-     
-      <Footer></Footer>
+
+      <Footer />
     </div>
   );
 };
