@@ -23,7 +23,7 @@ const About = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-blue-600 leading-tight">
             About Us
           </h1>
-          <p className="text-base md:text-xl font-medium text-slate-700 leading-relaxed text-balance">
+          <p className=" text-start  text-base md:text-lg  text-slate-700 leading-relaxed text-balance">
             At Ecostruct, we prioritize your building project's success by
             offering a curated selection of premium materials and tools from
             trusted global manufacturers. Our comprehensive product range
@@ -41,7 +41,7 @@ const About = () => {
         <div className="w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl shadow-xl shadow-blue-300">
           <img
             src="/images/building.png"
-            className="w-full h-auto object-cover transition-all duration-500 hover:scale-105 rounded-2xl"
+            className="w-full h-auto object-cover transition-all duration-500 hover:scale-110 rounded-2xl"
             alt="Building materials"
            
           />
@@ -52,8 +52,8 @@ const About = () => {
       <section id='knowMore' className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 my-10 md:my-20 p-4">
         {/* Our Services Card */}
         <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-xl shadow-md transition-all duration-300 hover:bg-purple-50 hover:shadow-lg transform hover:scale-105 text-center">
-          <h2 className="text-3xl font-semibold text-purple-700">Our Services</h2>
-          <p className="text-base text-gray-700 leading-relaxed">
+          <h2 className=" text-3xl font-semibold text-purple-700">Our Services</h2>
+          <p className="text-base text-start text-gray-700 leading-relaxed">
             We offer a wide range of building materials, plywood, interior
             fittings, fasteners, tools, and safety products at competitive
             prices. Our focus is on quality, reliability, and exceptional
@@ -66,7 +66,7 @@ const About = () => {
         {/* Our Vision Card */}
         <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-xl shadow-md transition-all duration-300 hover:bg-purple-50 hover:shadow-lg transform hover:scale-105 text-center">
           <h2 className="text-3xl font-semibold text-purple-700">Our Vision</h2>
-          <p className="text-base text-gray-700 leading-relaxed">
+          <p className="text-base text-start text-gray-700 leading-relaxed">
             Our vision is to become a leading supplier in the construction industry,
             recognized for our commitment to quality, sustainability, and customer
             satisfaction. We aim to continually expand our product range, stay at
@@ -78,7 +78,7 @@ const About = () => {
         {/* Our Mission Card */}
         <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-xl shadow-md transition-all duration-300 hover:bg-purple-50 hover:shadow-lg transform hover:scale-105 text-center">
           <h2 className="text-3xl font-semibold text-purple-700">Our Mission</h2>
-          <p className="text-base text-gray-700 leading-relaxed">
+          <p className="text-base text-start text-gray-700 leading-relaxed">
             At Ecostruct Trading, our mission is to provide top-quality building
             materials, plywood, interior fittings, fasteners, tools, and safety
             products to our valued customers in Dubai. We strive to be a reliable
@@ -94,7 +94,7 @@ const About = () => {
         <div className="w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl shadow-xl shadow-gray-300 order-2 md:order-1">
           <img
             src="/images/choose.png"
-            className="w-full h-auto object-cover rounded-2xl"
+            className="w-full h-auto transition-all duration-500 hover:scale-110 object-cover rounded-2xl"
             alt="Why Choose Us"
           />
         </div>
@@ -104,7 +104,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
             Why Choose Us
           </h2>
-          <ul className="text-base md:text-lg text-gray-700 space-y-3 list-none p-0">
+          <ul className="text-base text-start md:text-lg text-gray-700 space-y-3 list-none p-0">
             <li className="flex items-start gap-3">
               <span className="text-blue-500 text-xl">&#10003;</span>
               <p className="flex-1">

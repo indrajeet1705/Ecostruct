@@ -65,7 +65,7 @@ const Home = () => {
           <p className="text-2xl md:text-3xl font-semibold text-black">
             About ECOSTRUCT TRADING <br className="hidden md:block" /> LLC
           </p>
-          <p className="text-gray-700 text-sm md:text-base">
+          <p className="text-start  text-gray-700 text-sm md:text-base">
             At Ecostruct, we prioritize your building project's success by offering a curated selection of premium materials and tools from trusted global manufacturers. Our comprehensive product range ensures you find everything you need in one place, saving time and effort. Whether it's new construction or renovation, we provide high-quality products, competitive pricing, and fast delivery—making us your reliable partner.
           </p>
           <div className="flex justify-center lg:justify-start gap-8">
@@ -88,7 +88,7 @@ const Home = () => {
           <img
             src="/images/city.avif"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full transition-all duration-500 hover:scale-110 h-full object-cover"
           />
         </div>
       </div>

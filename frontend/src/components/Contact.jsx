@@ -15,7 +15,7 @@ const Contact = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-blue-600 leading-tight">
             Our Team
           </h1>
-          <p className="text-base md:text-xl font-medium text-slate-700 leading-relaxed">
+          <p className="text-base text-start md:text-lg  text-slate-700 leading-relaxed">
             We ensure top-quality products sourced from trusted manufacturers
             and backed by expert product knowledge to guide our customers
             effectively. Our offerings emphasize eco-friendly sustainability,
