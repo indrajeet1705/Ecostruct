@@ -46,7 +46,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-2">Contact Info</h3>
           <ul className="text-sm text-gray-300 space-y-2">
             <li>
-              <span className="font-semibold">Phone:</span> +971-XXX-XXXX
+              <span className="font-semibold">Phone:</span> +971-55-8818-452
             </li>
             <li>
               <span className="font-semibold">Email:</span> info@ecostruct.ae

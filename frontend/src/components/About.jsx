@@ -1,8 +1,10 @@
 import React from 'react';
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
 
 // Main App component to render the About page
 function App() {
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-gray-50 font-inter antialiased">
       {/* About Section */}
@@ -30,8 +32,8 @@ const About = () => {
             high-quality products, competitive pricing, and fast delivery making
             us your reliable partner.
           </p>
-          <button className="w-fit px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 mx-auto md:mx-0">
-            Know More
+          <button  className="w-fit px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 mx-auto md:mx-0">
+            <a href="#knowMore">Know More</a>
           </button>
         </div>
 
@@ -39,7 +41,7 @@ const About = () => {
         <div className="w-full max-w-md md:max-w-lg overflow-hidden rounded-2xl shadow-xl shadow-blue-300">
           <img
             src="/images/building.png"
-            className="w-full h-auto object-cover rounded-2xl"
+            className="w-full h-auto object-cover transition-all duration-500 hover:scale-105 rounded-2xl"
             alt="Building materials"
            
           />
@@ -47,7 +49,7 @@ const About = () => {
       </section>
 
       {/* Services, Vision, Mission Section */}
-      <section className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 my-10 md:my-20 p-4">
+      <section id='knowMore' className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 my-10 md:my-20 p-4">
         {/* Our Services Card */}
         <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-xl shadow-md transition-all duration-300 hover:bg-purple-50 hover:shadow-lg transform hover:scale-105 text-center">
           <h2 className="text-3xl font-semibold text-purple-700">Our Services</h2>
