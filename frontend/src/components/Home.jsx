@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import ProductCard from "./ProductCard";
-import product from "../assets/assets";
+import {productCatagory }from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -23,7 +23,8 @@ const Home = () => {
             Building Dubai's Future
           </p>
           <p className="text-base sm:text-xl md:text-2xl font-medium">
-            Your trusted partner for premium construction supplies, tools <br className="hidden sm:block" />
+            Your trusted partner for premium construction supplies, tools{" "}
+            <br className="hidden sm:block" />
             and materials across the UAE
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -46,8 +47,13 @@ const Home = () => {
             Comprehensive construction supplies for all your project needs
           </p>
           <div className="flex flex-wrap gap-8 justify-center mt-6">
-            {product.map((item, index) => (
-              <ProductCard key={index} name={item.name} image={item.image} info={item.info} />
+            {productCatagory.map((item, index) => (
+              <ProductCard
+                key={index}
+                name={item.name}
+                image={item.image}
+                info={item.info}
+              />
             ))}
           </div>
         </div>
@@ -59,7 +65,7 @@ const Home = () => {
             About ECOSTRUCT TRADING <br className="hidden md:block" /> LLC
           </p>
           <p className="text-gray-700 text-sm md:text-base">
-            Based in Dubai, we are a leading construction supply company serving contracting firms and facilities management companies across the UAE. Our commitment to quality and reliability has made us a trusted partner in the construction industry.
+            At Ecostruct, we prioritize your building project's success by offering a curated selection of premium materials and tools from trusted global manufacturers. Our comprehensive product range ensures you find everything you need in one place, saving time and effort. Whether it's new construction or renovation, we provide high-quality products, competitive pricing, and fast delivery—making us your reliable partner.
           </p>
           <div className="flex justify-center lg:justify-start gap-8">
             <div className="flex flex-col text-blue-500 text-2xl font-semibold">
@@ -78,7 +84,11 @@ const Home = () => {
         </div>
 
         <div className="max-w-sm w-full rounded-2xl overflow-hidden shadow-lg shadow-gray-400">
-          <img src="/images/city.avif" alt="" className="w-full h-full object-cover" />
+          <img
+            src="/images/city.avif"
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
 
