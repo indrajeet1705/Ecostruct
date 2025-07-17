@@ -49,6 +49,7 @@ const Home = () => {
           <div className="flex flex-wrap gap-8 justify-center mt-6">
             {productCatagory.map((item, index) => (
               <ProductCard
+              
                 key={index}
                 name={item.name}
                 image={item.image}

@@ -1,26 +1,17 @@
 import React, { useEffect, useState } from "react";
-// Assuming ProductCard was renamed to Card
-import Card from "./Card";
-// Ensure your products data is correctly imported
-// IMPORTANT: Make sure your 'products' data from '../assets/assets'
-// includes the 'category' property for each product as per our previous conversation.
+import Card from "./Card"
 import { products } from "../assets/assets";
+import Footer from './Footer'
 
 const Product = () => {
-  // State to hold products filtered by category for display
   const [categorizedProducts, setCategorizedProducts] = useState([]);
-  // State to hold the currently selected category (null means all products)
   const [selectedCategory, setSelectedCategory] = useState(null);
-  // State to control the visibility of the mobile category sidebar
   const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
 
-  // Function to filter products based on the selected category
   const filterProductsByCategory = (category) => {
     if (category === null) {
-      // If category is null, show all products
       setCategorizedProducts(products);
     } else {
-      // Filter products based on the selected category
       const filtered = products.filter(
         (product) => product.category === category
       );
@@ -28,20 +19,16 @@ const Product = () => {
     }
   };
 
-  // useEffect to run when the component mounts or selectedCategory changes
   useEffect(() => {
-    // Call the filter function whenever selectedCategory changes
     filterProductsByCategory(selectedCategory);
-  }, [selectedCategory]); // Dependency array: re-run when selectedCategory changes
+  }, [selectedCategory]); 
 
-  // useEffect to initialize products when the component first mounts
-  // This ensures all products are shown by default on page load
+ 
   useEffect(() => {
     setCategorizedProducts(products);
-  }, []); // Empty dependency array means this runs only once on mount
+  }, []); 
 
   return (
-    // Main container: full width, min-height for content, background color
     <div className="min-h-screen w-full bg-gray-50 font-sans">
       {/* Header Placeholder: Provides space at the top, adjust height as needed */}
       <div className="h-16 w-full bg-white shadow-sm flex items-center px-4 z-10 relative">
@@ -239,6 +226,7 @@ const Product = () => {
           )}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
