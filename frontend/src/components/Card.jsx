@@ -16,7 +16,7 @@ const Card = ({ product }) => {
     <div className="
       bg-white   overflow-hidden
       flex flex-col
-      m-3 w-fullm md:w-[300px] rounded-xl
+       w-[300px]  md:w-[400px] mt-2  rounded-xl
       transform transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-lg
       font-sans
     ">
@@ -33,16 +33,16 @@ const Card = ({ product }) => {
       </div>
 
       {/* Product Details Section */}
-      <div className="p-4 flex flex-col flex-grow">
+      <div className="p-4 flex bg-slate-100 hover:bg-blue-600 hover:text-white transition-all duration-500 flex-col flex-grow">
         <h2 className="
-          text-lg md:text-xl font-semibold text-gray-800
+          text-lg md:text-xl font-semibold 
           mb-2 text-center
         ">
           {pname}
         </h2>
 
         {/* Consolidated Details */}
-        <div className="flex flex-col gap-2 text-sm text-gray-600">
+        <div className="flex flex-col gap-2 text-sm ">
           <div>
             <span className="font-medium">Brands: </span>
             {pBrand && pBrand.join(', ')}
