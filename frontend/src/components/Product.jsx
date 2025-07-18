@@ -29,7 +29,7 @@ const Product = () => {
   }, []); 
 
   return (
-    <div className="min-h-screen w-full bg-gray-50 font-sans">
+    <div className="min-h-screen w-full bg-gray-200 font-sans">
       {/* Header Placeholder: Provides space at the top, adjust height as needed */}
       <div className="h-16 w-full bg-white shadow-sm flex items-center px-4 z-10 relative">
         <h1 className="text-xl font-bold text-gray-800">Our Products</h1>
@@ -208,7 +208,7 @@ const Product = () => {
         {/* Product Display Area */}
         <div
           className="
-            flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 lg:gap-8
+            flex flex-wrap justify-center  gap-4 md:gap-6 lg:gap-8
             w-full md:flex-grow
             md:overflow-y-auto md:max-h-[calc(100vh-100px)] lg:max-h-[calc(100vh-120px)]
             p-2 md:p-0

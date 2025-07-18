@@ -16,7 +16,7 @@ const Card = ({ product }) => {
     <div className="
       bg-white   overflow-hidden
       flex flex-col
-       w-[300px]  md:w-[400px] mt-2  rounded-xl
+       w-[300px]  md:w-[300px] mt-2  rounded-xl
       transform transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-lg
       font-sans
     ">
