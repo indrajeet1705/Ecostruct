@@ -29,7 +29,7 @@ const Product = () => {
   }, []); 
 
   return (
-    <div className="min-h-screen w-full bg-gray-200 font-sans">
+    <div className="min-h-screen w-full bg-white md:bg-gray-200 font-sans">
       {/* Header Placeholder: Provides space at the top, adjust height as needed */}
       <div className="h-16 w-full bg-white shadow-sm flex items-center px-4 z-10 relative">
         <h1 className="text-xl font-bold text-gray-800">Our Products</h1>

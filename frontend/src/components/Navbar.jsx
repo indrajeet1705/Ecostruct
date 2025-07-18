@@ -14,15 +14,11 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white border-b shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-4 flex justify-between items-center">
+    <nav className="w-full h-[50px] md:h-[10vh]  flex items-center  fixed top-0 left-0 z-50 bg-white border-b shadow-md">
+      <div className="max-w-7xl w-full md:mx-auto px-4 sm:px-6 lg:px-20 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="overflow-hidden">
-          <img
-            src="/images/logo.png"
-            className="w-[200px] h-[50px] rounded-xl object-contain"
-            alt="Ecostruct Logo"
-          />
+          <p className="text-3xl  font-semibold md:text-5xl">ECOSTRUCT</p>
         </div>
 
         {/* Desktop Menu */}
@@ -51,7 +47,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white px-6 py-4 flex flex-col gap-4 text-gray-700 font-medium shadow-lg">
+        <div className="flex flex-col translate-y-32 items-center absolute w-full  z-20 bg-white font-semibold gap-3 py-4    ">
           <NavLink to="/" onClick={toggleMenu} className={linkClasses}>Home</NavLink>
           <NavLink to="/products" onClick={toggleMenu} className={linkClasses}>Products</NavLink>
           <NavLink to="/about" onClick={toggleMenu} className={linkClasses}>About Us</NavLink>

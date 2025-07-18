@@ -18,7 +18,7 @@ const Card = ({ product }) => {
       flex flex-col
        w-[300px]  md:w-[300px] mt-2  rounded-xl
       transform transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-lg
-      font-sans
+      font-sans border shadow-blue-500
     ">
       {/* Product Image Section */}
       <div className="
