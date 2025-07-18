@@ -10,28 +10,25 @@ const Card = ({ product }) => {
     );
   }
 
-  const { pname, pBrand, psize, pprice } = product;
-
-  // Placeholder image - replace with your actual product image URL
-  const productImage = 'https://via.placeholder.com/180x150?text=Product+Image';
+  const { pname, pBrand, psize, pprice ,pCode} = product;
 
   return (
     <div className="
-      bg-white rounded-lg shadow-md overflow-hidden
+      bg-white   overflow-hidden
       flex flex-col
-      m-3 w-full max-w-xs md:max-w-sm lg:max-w-md
-      transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg
+      m-3 w-fullm md:w-[300px] rounded-xl
+      transform transition-all duration-500 hover:scale-105 shadow-2xl hover:shadow-lg
       font-sans
     ">
       {/* Product Image Section */}
       <div className="
-        w-full h-36 md:h-40
-        overflow-hidden border-b border-gray-100
+        w-full h-32 p-5 md:h-36
+        overflow-hidden border-b object-cover flex items-center justify-center border-gray-100
       ">
         <img
-          src={productImage}
+          src={`/images/productimage/${pCode}.png`}
           alt={pname}
-          className="w-full h-full object-cover block"
+          className="w-full object-cover block"
         />
       </div>
 
